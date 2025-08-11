@@ -1,0 +1,20 @@
+@'
+Header Analysis — Task 2
+
+1) Received lines:
+- Earliest hop: 203.113.23.55 (unknown123.isp.vn) — not a PayPal sending IP.
+- Mail was injected via an external ISP and relayed to mx.example.local.
+
+2) From / Reply-To / Return-Path:
+- From: security-alert@paypa1-support.com (domain paypa1-support.com — suspicious because of “1”)
+- Reply-To: no-reply@securelogin.cn (different domain -> receiver replies to attacker)
+- Return-Path: bounce@securelogin.cn
+
+3) Flags to check with tool:
+- SPF: Does senders' domain have SPF and does the sending IP pass?
+- DKIM: Is message signed and does signature verify?
+- DMARC: Is the domain protected by DMARC?
+
+Recommendations:
+- Paste the full headers into an online header analyzer (MXToolbox / Google Toolbox) for SPF/DKIM/DMARC results.
+'@ | Set-Content header_analysis.txt -Encoding UTF8

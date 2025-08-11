@@ -1,0 +1,17 @@
+@'
+From: "PayPal Alerts" <security-alert@paypa1-support.com>
+To: victim@example.com
+Subject: URGENT: Your PayPal account has been limited!
+
+Dear Customer,
+
+We detected unusual sign-in activity on your PayPal account. For your protection, we have temporarily limited account functions.
+
+Please verify your identity within 6 hours to avoid permanent suspension:
+http://paypal-verification-security-check.com/login
+
+If you did not request this, ignore this message.
+
+Regards,
+PayPal Security Team
+'@ | Set-Content phishing_email.txt -Encoding UTF8

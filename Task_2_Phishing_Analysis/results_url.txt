@@ -1,0 +1,24 @@
+@'
+URL Analysis — Task 2
+
+URL: http://paypal-verification-security-check.com/login
+
+Checks performed:
+1) VirusTotal (URL scan) — result: SUSPICIOUS (example)
+   - Engines flagging: 6/90
+   - Hosting IP: 45.112.203.14 (example)
+   - First seen: 2025-07-30
+
+2) WHOIS lookup (domain registration):
+   - Registrar: example-registrar
+   - Creation date: 2025-07-28
+   - Registrant country: China (example)
+   - Domain contains hyphens and keywords; typically used for phishing.
+
+3) DNS / nslookup:
+   - nslookup paypal-verification-security-check.com -> 45.112.203.14
+   - Reverse DNS does not belong to paypal.com
+
+Conclusion:
+- Domain is newly registered, uses suspicious registrar/country, and VT flags it. Do NOT visit.
+'@ | Set-Content url_analysis.txt -Encoding UTF8

@@ -1,0 +1,9 @@
+@'
+Received: from unknown123.isp.vn (203.113.23.55) by mail.example.local (mx1) with ESMTP id ABC123;
+Mon, 04 Aug 2025 10:22:31 -0700
+From: "PayPal Alerts" <security-alert@paypa1-support.com>
+Reply-To: no-reply@securelogin.cn
+Return-Path: bounce@securelogin.cn
+Message-ID: <ABC1234@mail.example.local>
+Subject: URGENT: Your PayPal account has been limited!
+'@ | Set-Content email_header.txt -Encoding UTF8
