@@ -1,0 +1,11 @@
+# Windows Firewall Configuration Steps
+
+1. Open "Windows Defender Firewall with Advanced Security".
+2. Go to Inbound Rules → New Rule.
+3. Select "Port" → TCP → Specific local ports: 23 → Block the connection → Apply to all profiles → Name: Block_Telnet.
+4. Verify the rule is active.
+5. For SSH test, create new rule → Port: 22 → Allow the connection.
+6. Test using:
+   - telnet localhost 23  (should be blocked)
+   - ssh test@localhost   (should be allowed)
+7. Remove the Block_Telnet rule after testing.
